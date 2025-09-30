@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Justin Challenge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card" id="card">
+      <div class="header hidden">
+      </div>
+      <div class="content" id="screen-home">
+        <div class="muted">Justin Challenge</div>
+        <div class="actions">
+          <button class="btn btn-primary" id="btn-play">Play</button>
+          <button class="btn" id="btn-exit">Exit</button>
+        </div>
+        <div class="footer-note">Answer all 15 Justin questions correctly to finish, it might be annoying but go FOR JUSTIN!</div>
+      </div>
+
+
+      <div class="content hidden" id="screen-game">
+        <div class="grid-2" style="align-items:center;">
+          <div>
+            <div class="muted">Progress</div>
+            <div class="progress" aria-label="progress">
+              <div class="bar" id="progress-bar"></div>
+            </div>
+          </div>
+          <div style="text-align:right;">
+            <span class="muted">Score:</span>
+            <span class="score" id="score">0</span>
+          </div>
+        </div>
+
+        <div id="question-box">
+          <h2 id="question-text" style="margin: 8px 0 8px 0;">Question</h2>
+          <div id="answers" class="answer-list"></div>
+          <div id="freeform" class="inline-input hidden">
+            <input id="answer-input" type="text" placeholder="Type your answer" autocomplete="off" />
+            <button class="btn btn-primary" id="submit-input">Submit</button>
+          </div>
+          <div id="hint-box" class="footer-note hidden"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn" id="btn-hint">Hint (1 left)</button>
+        </div>
+      </div>
+
+      <div class="content hidden" id="screen-finish">
+        <h2 style="margin: 0 0 6px 0;">Nice run!</h2>
+        <p class="muted" id="final-summary">You scored 0.</p>
+        <div class="actions">
+          <button class="btn btn-primary" id="btn-replay">Play Again</button>
+          <button class="btn" id="btn-exit-2">Exit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <video id="scare-video" playsinline></video>
+    <img id="scare-fallback" class="hidden" alt="" />
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
