@@ -216,7 +216,7 @@
                                 for(let j = 0; j < 8; j++) {
                                     if(movement[j][0] !== 0 || movement[j][1] !== 0) {
                                         keys[j].animate([{translate: '0px 0px'}, {translate: `${movement[j][0] * 20}vh ${movement[j][1] * 20}vh`}],
-                                                       {duration: 270, easing: 'ease-in-out'});
+                                                       {duration: 142, easing: 'ease-in-out'});
                                     }
                                 }
                                 correctKey += movement[correctKey][0] + movement[correctKey][1] * 2;
@@ -258,10 +258,10 @@
                                             window.setTimeout(() => {
                                                 container.className = 'rotary-container';
                                                 container.animate([{rotate: '0deg'}, {rotate: '360deg'}],
-                                                                 {duration: 15000, iterations: Infinity});
+                                                                 {duration: 12000, iterations: Infinity});
                                                 for(let k = 0; k < 8; k++) {
                                                     keys[k].animate([{rotate: '0deg'}, {rotate: '-360deg'}],
-                                                                 {duration: 15000, iterations: Infinity});
+                                                                 {duration: 12000, iterations: Infinity});
                                                 }
                                                 let k = -1;
                                                 blinkInterval = window.setInterval(() => {
