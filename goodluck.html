@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>goodluck.... </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=vpn_key" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 
@@ -75,6 +76,10 @@
             user-select: none;
             cursor: pointer;
         }
+        .key .material-symbols-outlined {
+            font-size: 12vh;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
         .rotary-container > .key {
             position: absolute;
             left: calc(20vmin * var(--x) - 10vh);
@@ -139,16 +144,16 @@
 </head>
 <body>
     <div class="container hidden">
-        <div class="key">&gt;</div>
-        <div class="key">&gt;</div>
-        <div class="key">&gt;</div>
-        <div class="key">&gt;</div>
-        <div class="key">&gt;</div>
-        <div class="key">&gt;</div>
-        <div class="key">&gt;</div>
-        <div class="key">&gt;</div>
+        <div class="key"><span class="material-symbols-outlined">vpn_key</span></div>
+        <div class="key"><span class="material-symbols-outlined">vpn_key</span></div>
+        <div class="key"><span class="material-symbols-outlined">vpn_key</span></div>
+        <div class="key"><span class="material-symbols-outlined">vpn_key</span></div>
+        <div class="key"><span class="material-symbols-outlined">vpn_key</span></div>
+        <div class="key"><span class="material-symbols-outlined">vpn_key</span></div>
+        <div class="key"><span class="material-symbols-outlined">vpn_key</span></div>
+        <div class="key"><span class="material-symbols-outlined">vpn_key</span></div>
     </div>
-    <div id="wrong">MOSQUEDA MANKA</div>
+    <div id="wrong">lala</div>
     <div id="correct">TAMA</div>
     <div id="start-button">START</div>
     
@@ -216,7 +221,7 @@
                                 for(let j = 0; j < 8; j++) {
                                     if(movement[j][0] !== 0 || movement[j][1] !== 0) {
                                         keys[j].animate([{translate: '0px 0px'}, {translate: `${movement[j][0] * 20}vh ${movement[j][1] * 20}vh`}],
-                                                       {duration: 164, easing: 'ease-in-out'});
+                                                       {duration: 139, easing: 'ease-in-out'});
                                     }
                                 }
                                 correctKey += movement[correctKey][0] + movement[correctKey][1] * 2;
